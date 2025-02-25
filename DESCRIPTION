@@ -1,0 +1,41 @@
+Package: pm4mp
+Title: Phylogenetic Methods for Medicinal Plants
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Giovanni", "Zecca", , "giovanni.zecca@unimib.it", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-2334-8897")),
+    person("Elisa", "Toini", role = "ctb",
+           comment = c(ORCID = "0000-0001-5668-9976")),
+    person("National Biodiversity Future Center, NBFC", role = "fnd")
+  )
+Description: A collection of tools to support phylogenetic-based
+    identification and the prioritization of species with medicinal
+    potential. Included functions allow you to: download lists of
+    medicinal plants from public databases, check and match taxa names
+    against a reference phylogeny, call an external 'PHYLOCOM' executable
+    (Webb et al. 2008) (not included in the package!) to perform multiple
+    replicates of the 'nodsigl' analysis whose outputs can be imported,
+    processed and summarised in R, calculate the Hot ancestry Score and
+    the (relative) probability of the taxa present in a tree to be
+    medicinal species, show the results graphically.
+License: GPL (>= 3)
+Depends: 
+    R (>= 4.1.0)
+Imports: 
+    ape,
+    castor,
+    cluster,
+    factoextra,
+    ggplot2,
+    ggpubr,
+    graphics,
+    grDevices,
+    phytools,
+    polite,
+    rvest,
+    stats,
+    stringdist,
+    utils
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
