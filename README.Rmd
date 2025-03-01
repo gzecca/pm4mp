@@ -1,0 +1,114 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# pm4mp
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The aim of the `pm4mp` package is to support phylogenetic-based identification 
+and prioritisation of species with high medicinal potential. The methods 
+implemented in the package extend the ‘hot node’ approach and propose new solutions
+to overcome some of its imitations.
+The functions included allow to:
+
+- download lists of medicinal plants from [CMAUP v1.0 & v2.0](https://bidd.group/CMAUP/)
+  public database;
+- check and match taxa names against a reference phylogeny provided by the user;
+- prepare input files for subsequent analyses;
+- call an external executable of the software [PHYLOCOM](https://github.com/phylocom/phylocom)
+  to perform multiple replicates of the 'nodsigl' analysis;
+- import, process and summarise the outputs obtained from multiple replicates of
+  the 'nodsigl' analysis according to predefined criteria and identify the 
+  'hot trees' for the studied disease;
+- compute the Hot ancestry Score and for the species present in the identified 
+  'hot trees';
+- compute the (relative) probability for the species present in a (hot) tree to
+  be a medicinal species;
+- show the results graphically.
+
+**NOTE: The [PHYLOCOM](https://github.com/phylocom/phylocom) software, which is
+required to perform the ‘nodesigl’ analysis, is not included in this package and 
+must be downloaded by the user independently directly from the author's site.**
+
+However, not all functions of the package require the presence of PHYLOCOM to be used. In particular the following functions can be used without PHYLOCOM being present:
+
+- `clean_and_match()`;
+- `dnu_CMAUPv1()`;
+- `dnu_CMAUPv2()`;
+- `hmpp()`;
+- `pr2d_CMAUPv1()`;
+- `pr2d_CMAUPv2()`;
+- `sample4nodesigl()`;
+- `tree4nodesigl()`;
+- `visual_comp()`;
+
+Conversely, the following function depends directly on PHYLOCOM being present for
+it to work:
+
+- `nodesiglR()`;
+
+Finally, the following functions, although not directly dependent on the presence of PHYLOCOM, directly or indirectly use the results of its 'nodesigl' analysis:
+
+- `has()`(indirect use);
+- `hot_tree_painteR()`(indirect use);
+- `nodesigle_harvesteR()`(direct use);
+
+
+### Installation
+You can install the last version of `pm4mp` from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("gzecca/pm4mp")
+```
+
+### Load & attach
+You can load and attach the installed version of `pm4mp` with:
+
+```r
+library(pm4mp)
+
+```
+
+### Getting help
+You can use the `help()` function and the `?` help operator to access the documentation
+pages for `pm4mp` functions.
+
+```r
+# Examples: 
+# load and attach
+library(pm4mp)
+
+# access the documentation page of the function has()
+help("has")
+
+# access the documentation page of the function hmpp()
+?hmpp
+```
+
+### About examples in the documetation pages
+* Currently, to illustrate how the package works, the examples in the documentation
+  pages are built from scratch, without relying on pre-existing data. This should 
+  make the format of the files used and the workflow clearer.
+  However, we recognise that this is not optimal for several reasons. We therefore 
+  hope to provide a vignette and example datasets as soon as possible.
+
+* Since nearly all of the functions in the package generate output files, all of
+  the examples presented in the documentation pages write files to the user's tempdir()
+  during their execution. At the end of each example, the code needed to clean up
+  the user's temp folder is provided.
+
+
