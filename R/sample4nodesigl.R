@@ -86,7 +86,7 @@
 sample4nodesigl<-function(fdisease,tree,disout){
   if(missing(disout)){stop("WARNING: 'disout' parameter must be specified!")}
   disease_input<-utils::read.csv(fdisease)
-  names(disease)[which(names(disease) == "Plants")]<-"Plant.Name"
+  names(disease_input)[which(names(disease_input) == "Plants")]<-"Plant.Name"
   disease<-disease_input$Plant.Name
   mytree<-ape::read.tree(tree)
   indisease<-mytree$tip.label %in% disease
