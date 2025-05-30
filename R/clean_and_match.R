@@ -25,15 +25,26 @@ match_n_qmatch<-function(disSpecies, refSpecies, match_thr){
   matching_tab<-as.data.frame(intersect(disSpecies, refSpecies))
   names(matching_tab)<-"Plant.Name"
   nomatching<-setdiff(disSpecies, refSpecies)
-  refDiff<-setdiff(refSpecies, matching_tab$Plant.Name) #avoid double matching...
-  distlist<-lapply(nomatching, \(x) stringdist::stringsim(x,refDiff, method = "dl"))
-  maxsim<-sapply(distlist, \(x) max(x))
-  maxpos<-sapply(distlist, \(x) which.max(x))
-  above_thr<- maxsim >= match_thr
-  smatch_tab<-as.data.frame(cbind(Reference = refDiff[maxpos],
+
+  if(isTRUE(length(nomatching)>0)){
+    refDiff<-setdiff(refSpecies, matching_tab$Plant.Name) #avoid double matching...
+    distlist<-lapply(nomatching, \(x) stringdist::stringsim(x,refDiff, method = "dl"))
+    maxsim<-sapply(distlist, \(x) max(x))
+    maxpos<-sapply(distlist, \(x) which.max(x))
+    above_thr<- maxsim >= match_thr
+    smatch_tab<-as.data.frame(cbind(Reference = refDiff[maxpos],
                                   DataBase = nomatching,
                                   Similarity = maxsim ))
-  qmatch_tab<-smatch_tab[above_thr,]
+    qmatch_tab<-smatch_tab[above_thr,]
+    if(nrow(qmatch_tab)==0){
+      qmatch_tab<-c("\n\nNone of the similarity scores calculated between potentially mismatched name pairs
+                    \nwere equal to or higher than the chosen acceptance threshold (i.e., the value set
+                    \nfor the match_thr parameter). Should you wish to save these potential fuzzy matches
+                    \nto a file, please consider lowering the value of the match_thr parameter.\n\n\n")
+    }
+  }else{
+    qmatch_tab<-c("All the medicinal plants provided by the user are listed in the reference list.\n\n\n")
+  }
   exact100 <-length(matching_tab$Plant.Name)/length(disSpecies)*100
   cat(paste0("\nMedicinal plants exactly matching to the reference:\n n matches = ",
       length(matching_tab$Plant.Name), "\n % matches = ",round(exact100,3), "\n\n"))
@@ -152,7 +163,7 @@ check_duplicates<-function(out_tabs,refSpecies, clean_ref, shortHybr){
 #'   After the cleaning phases the function searches for an exact match between the
 #'   names in the reference species list and the names found in the list of
 #'   plants related to the disease of interest. Fuzzy matches are also
-#'   identified against a threshold set by the user (see parameters below). \cr
+#'   identified against a threshold set by the user (see parameters). \cr
 #'   Due to software constraints or readability needs, the reference phylogeny
 #'   may not include full species names. For this reason the list of reference
 #'   species can be provided in different ways by the user (see parameters).
@@ -416,9 +427,13 @@ clean_and_match<-function(reference,reftype=c("align","tr", "vect", "z"),
   utils::write.csv(out_tabs$exact_match,
                    file= paste0(outpath,prefix,"_cleanedup_exmatch.csv"),
                    quote = FALSE,row.names =FALSE)
-  utils::write.csv(out_tabs$quasi_match,
+  if (is.data.frame(out_tabs$quasi_match)){
+    utils::write.csv(out_tabs$quasi_match,
                    file= paste0(outpath,prefix,"_cleanedup_qumatch_",match_thr,".csv"),
                    quote = FALSE,row.names =FALSE)
+  }else{
+    cat(out_tabs$quasi_match)
+  }
   if (write_ref){
     Ref.Species<-ifelse (shortHybr, as.data.frame(out_tabs$Reference.Species),
                          as.data.frame(refSpecies))
