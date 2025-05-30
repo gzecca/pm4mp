@@ -6,14 +6,14 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The aim of the `pm4mp` package is to support phylogenetic-based
-identification and prioritisation of species with high medicinal
-potential. The new methods implemented in the package propose solutions
-to some of the inherent limitations of using ‘hot nodes’ in
-bioprospecting, extend the ‘hot node’ approach to the concept of ‘hot
-trees’ and offer new ways of prioritising potential new medicinal
-species. These new functionalities are presented and discussed in Zecca
-et al. (2025).
+The aim of the `pm4mp` package is to support and accelerate the
+phylogenetic-based identification and prioritisation of species with
+high medicinal potential. The new methods implemented in the package
+propose features to extend and improve the use of the “hot nodes”
+approach in bioprospecting. New functionalities have been introduced
+that allow new potentially medicinal species to be prioritised by
+assigning each a score based on its medicinal potential. These novel
+methodologies are presented and discussed in Zecca et al. (2025).
 
 The functions included allow to:
 
@@ -32,7 +32,8 @@ The functions included allow to:
 - compute the Hot Ancestry Score for all species present in the
   identified ‘hot trees’;
 - compute the (relative) probability of being a medicinal species for
-  all the taxa present in the provided (hot) tree(s);
+  all the taxa present in the provided (hot) tree(s) (i.e., for all ‘hot
+  species’);
 - show the results graphically.
 
 **NOTE:The [Phylocom](https://github.com/phylocom/phylocom) application,
@@ -40,9 +41,9 @@ which is required to perform the ‘nodesigl’ analysis, is not included in
 this package and must be downloaded separately by the user from the
 author’s site.**
 
-However, not all functions of the package require the presence of
-Phylocom to be used. In particular the following functions can be used
-without Phylocom being present:
+Not all functions of the package require the presence of Phylocom to be
+used. In particular the following functions can be used without Phylocom
+being present:
 
 - `clean_and_match()`
 - `dnu_CMAUPv1()`
@@ -63,9 +64,11 @@ Finally, the following functions, although not directly dependent on the
 presence of Phylocom, directly or indirectly use the results of its
 ‘nodesigl’ analysis:
 
-- `has()`(indirect use)
-- `hot_tree_painteR()`(indirect use)
 - `nodesigle_harvesteR()`(direct use)
+- `has()`(indirect use: it needs the ouput of
+  function`nodesigle_harvesteR()`)
+- `hot_tree_painteR()`(indirect use:it needs the ouput of
+  function`nodesigle_harvesteR()`)
 
 ### Installation
 
@@ -133,4 +136,5 @@ help("has")
 
 - Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
   identification and the prioritisation of new plants with medicinal
-  potential: the pm4mp R package.
+  potential: the pm4mp (Phylogenetic Methods for Medicinal Plants) R
+  package

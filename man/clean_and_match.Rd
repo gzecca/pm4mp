@@ -129,7 +129,7 @@ accessions, can be applied also to the reference species list. \cr
 After the cleaning phases the function searches for an exact match between the
 names in the reference species list and the names found in the list of
 plants related to the disease of interest. Fuzzy matches are also
-identified against a threshold set by the user (see parameters below). \cr
+identified against a threshold set by the user (see parameters). \cr
 Due to software constraints or readability needs, the reference phylogeny
 may not include full species names. For this reason the list of reference
 species can be provided in different ways by the user (see parameters).
