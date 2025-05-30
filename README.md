@@ -128,7 +128,7 @@ help("has")
 
 - Webb, C. O.; Ackerly, D. D. & Kembel, S. W. (2008) Phylocom: software
   for the analysis of community structure and trait evolution.
-  Bioinformatics 24: 2098-2100. (PDF)
+  Bioinformatics 24: 2098-2100.
 
 - Xian Zeng, Peng Zhang, Yali Wang, et al. CMAUP: a database of
   collective molecular activities of useful plants. Nucleic Acids
