@@ -4,16 +4,17 @@
 # pm4mp
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 The aim of the `pm4mp` package is to support and accelerate the
-phylogenetic-based identification and prioritisation of species with
-high medicinal potential. The new methods implemented in the package
-propose features to extend and improve the use of the “hot nodes”
-approach in bioprospecting. New functionalities have been introduced
-that allow new potentially medicinal species to be prioritised by
-assigning each a score based on its medicinal potential. These novel
-methodologies are presented and discussed in Zecca et al. (2025).
+phylogenetic-based prioritisation of species with underexplored
+medicinal potential. The new methods implemented in the package propose
+features to extend and improve the use of the “hot nodes” approach in
+bioprospecting. New functionalities have been introduced that allow new
+potentially medicinal species to be prioritised by assigning each a
+score based on its medicinal potential. These novel methodologies are
+presented, tested and discussed in Zecca et al. (2026).
 
 The functions included allow to:
 
@@ -119,22 +120,53 @@ help("has")
   each example, the code needed to clean up the user’s temp folder is
   provided.
 
-### References
+### Credits and references
 
-- Dongyue Hou, Hanbo Lin, Yuhan Feng, et al. CMAUP database update 2024:
-  extended functional and association information of useful plants for
-  biomedical research. Nucleic Acids Research 2024;
-  <DOI:doi.org/10.1093/nar/gkad921>
+**If you use the `pm4mp`package, please cite:**
+
+- Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+  prioritisation of plant species with underexplored medicinal
+  potential: The pm4mp (Phylogenetic Methods for Medicinal Plants) R
+  package. `Plants, People, Planet`, 1–19.
+  <https://doi.org/10.1002/ppp3.70189>
+
+**For a first application of some of the functions described in the
+package (mainly the`nodesigle_harvesteR()` method) see:**
+
+- Lambiase, A., Spandri, G., Moukham, H., Toini, E., D’Urzo, A., Zecca,
+  G., Commisso, M., Guzzo, F., Santoro, V., Piccinelli, A. L., Calleri,
+  E., Salerno, S., Rinaldi, F., Negri, S., Santambrogio, C., Brioschi,
+  M., Solana-Manrique, C., Labra, M., Grassi, F., Paricio, N., …
+  Coccetti, P. (2026). Acteoside exerts neuroprotective effects by
+  preventing α-synuclein aggregation and oxidative stress in models of
+  Parkinson’s disease. `Neurotherapeutics`, 23(1), e00825.
+  <https://doi.org/10.1016/j.neurot.2025.e00825>
+
+**If you use the`Phylocom`software, please cite:**
 
 - Webb, C. O.; Ackerly, D. D. & Kembel, S. W. (2008) Phylocom: software
   for the analysis of community structure and trait evolution.
-  Bioinformatics 24: 2098-2100.
+  `Bioinformatics`, 24: 2098-2100.
+
+**If you use the `CMAUP`databases, please cite:**
+
+- Dongyue Hou, Hanbo Lin, Yuhan Feng, et al. CMAUP database update 2024:
+  extended functional and association information of useful plants for
+  biomedical research. `Nucleic Acids Research`,
+  <DOI:doi.org/10.1093/nar/gkad921>
 
 - Xian Zeng, Peng Zhang, Yali Wang, et al. CMAUP: a database of
-  collective molecular activities of useful plants. Nucleic Acids
-  Research 2019; 47(D1): D1118-D1127; <DOI:doi.org/10.1093/nar/gky965>
+  collective molecular activities of useful plants.
+  `Nucleic Acids Research`, 47(D1): D1118-D1127;
+  <DOI:doi.org/10.1093/nar/gky965>
 
-- Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-  identification and the prioritisation of new plants with medicinal
-  potential: the pm4mp (Phylogenetic Methods for Medicinal Plants) R
-  package
+**If you use the phylogeny published by Zanne et al.(2014), please
+cite:**
+
+- Zanne, A. E., Tank, D. C., Cornwell, W. K., Eastman, J. M., Smith, S.
+  A., FitzJohn, R. G., McGlinn, D. J., O’Meara, B. C., Moles, A. T.,
+  Reich, P. B., Royer, D. L., Soltis, D. E., Stevens, P. F., Westoby,
+  M., Wright, I. J., Aarssen, L., Bertin, R. I., Calaminus, A.,
+  Govaerts, R., … Beaulieu, J. M. (2014). Three keys to the radiation of
+  angiosperms into freezing environments. `Nature`, 506, 89–92.
+  <https://doi.org/10.1038/nature12872>
