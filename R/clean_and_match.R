@@ -143,7 +143,7 @@ check_duplicates<-function(out_tabs,refSpecies, clean_ref, shortHybr){
 #'   proceeding further with subsequent analyses.
 #'
 #' @details A preliminary cleaning is applied to species names downloaded from
-#'   the plants-diseases databases following Zecca et all. 2025. Several
+#'   the plants-diseases databases following Zecca et all. (2026). Several
 #'   cleaning steps are performed. In particular:
 #' \itemize{
 #' \item  leading and/or trailing whitespace are removed from species names;
@@ -181,8 +181,9 @@ check_duplicates<-function(out_tabs,refSpecies, clean_ref, shortHybr){
 #'       and the phylogeny of reference. The alignment and the tree used must be
 #'       in in sequential PHYLIP and a Newick format, respectively.
 #'       This option was expressly designed to work with the data of Zanne et al. (2014),
-#'       in which case the 'reference' parameter must be:
-#'       c(alignment="Vascular_Plants_32223_taxon.phy", tree="Vascular_Plants_rooted.dated.tre").
+#'       in which case the 'reference' parameter must be:\cr
+#'       c(alignment ="Vascular_Plants_32223_taxon.phy",\cr
+#'        tree ="Vascular_Plants_rooted.dated.tre").
 #'       In this case the alignment is used exclusively to reconstruct the complete
 #'       names of the hybrid species while the tree is used for matching
 #'       taxa after hybrids names correction.
@@ -194,8 +195,8 @@ check_duplicates<-function(out_tabs,refSpecies, clean_ref, shortHybr){
 #' \item "align": for an alignment in sequential PHYLIP format;
 #' \item "tr": for a tree in Newick format;
 #' \item "vect": for vector specified by the user;
-#' \item "z": for a vector with the following form:
-#'     c(alignment="path_alignment_file_name", tree="path_tree_file_name"),
+#' \item "z": for a vector with the following form:\cr
+#'     c(alignment ="path_alignment_file_name", tree ="path_tree_file_name"),
 #'     where alignment and tree are in sequential PHYLIP and Newick format, respectively.
 #' }
 #'   No other forms are allowed. Please note that the  "z" option will
@@ -232,7 +233,7 @@ check_duplicates<-function(out_tabs,refSpecies, clean_ref, shortHybr){
 #' @return The number and percentage of medicinal plants that produced an exact
 #'   match with the reference taxa are printed on the screen. Duplicate names,
 #'   if any, are also printed on the screen when check_dup=TRUE. Two csv files
-#'   named "diseasename_cleanedup_exmatch.csv" and
+#'   named "diseasename_cleanedup_exmatch.csv" and\cr
 #'   "diseasename_cleanedup_qumatch_threshold.csv" are saved. The first one is
 #'   single column file including all medicinal species that produced an exact
 #'   match with the reference taxa. The latter is a three-columns file
@@ -247,7 +248,7 @@ check_duplicates<-function(out_tabs,refSpecies, clean_ref, shortHybr){
 #'   before going further with subsequent analyses.
 #'
 #' @author Giovanni Zecca, \email{giovanni.zecca@@unimib.it}, with the
-#'   contribution of Francesco Artusa,
+#'   contribution of Francesco Artusa,\cr
 #'   \email{francesco.artusa@studenti.unimi.it} and Elisa Toini,
 #'   \email{e.toini@@campus.unimib.it}
 #'
@@ -259,10 +260,11 @@ check_duplicates<-function(out_tabs,refSpecies, clean_ref, shortHybr){
 #'   The R Journal (2014) 6:1, pages 111-122.\cr
 #' - Zanne, A., Tank, D., Cornwell, W. et al. Three keys to the radiation of
 #'   angiosperms into freezing environments.  Nature 506, 89–92 (2014).
-#'   https://doi.org/10.1038/nature12872
-#' - Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-#'   identification and the prioritisation of new plants with medicinal
-#'   potential: the  pm4mp R package.\cr
+#'   https://doi.org/10.1038/nature12872\cr
+#' - Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+#'   prioritisation of plant species with underexplored medicinal potential:
+#'   The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+#'   Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189.\cr
 #'
 #' @seealso [pr2d_CMAUPv1()], [pr2d_CMAUPv2()]
 #'

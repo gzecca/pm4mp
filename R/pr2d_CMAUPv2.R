@@ -83,10 +83,11 @@ get_stuff2<-function(){
 #'   Nucleic Acids Research 2024; DOI: doi.org/10.1093/nar/gky965.\cr
 #' - Perepolkin D. (2023) polite: Be Nice on the Web. https://github.com/dmi3kno/polite \cr
 #' - Wickham H (2023). rvest: Easily Harvest (Scrape) Web Pages.
-#'   https://rvest.tidyverse.org/, https://github.com/tidyverse/rvest.
-#' - Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-#'   identification and the prioritisation of new plants with medicinal
-#'   potential: the  pm4mp R package.\cr
+#'   https://rvest.tidyverse.org/, https://github.com/tidyverse/rvest.\cr
+#' - Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+#'   prioritisation of plant species with underexplored medicinal potential:
+#'   The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+#'   Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189\cr
 #'
 #' @seealso [dnu_CMAUPv2]
 #'

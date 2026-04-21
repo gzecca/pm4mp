@@ -87,14 +87,14 @@ can be provided as vector elements so that different reference distance
 thresholds can be applied to different "hot trees". In this case the number
 of elements present in the vector must be equal to the number of "hot trees"
 analyzed and their order corresponds to that of the trees.
-A single threshold is applied to each tree, which however may differ from tree to tree.
+A single threshold is applied to each tree, which however may differ from tree to tree.\cr
 \item If 'method' = "multi_thr", then 'thr_level must be a numeric vector with
 2 elements . Their values correspond to the percentiles of the "minimum distance"
 sample used to identify the minimum and maximum reference distance thresholds
 to be used in the calculation. The number and the position of the intermediate
 reference thresholds (i.e. those within the minimum and the maximum thresholds)
 are determined via the 'by' parameter (see below). All the specified reference
-thresholds are applied to each tree.
+thresholds are applied to each tree.\cr
 \item When the 'method' parameter is set to "kmeans" or "pam", then the parameter
 'thr_level' is ignored.
 }}
@@ -106,7 +106,7 @@ maximum and minimum threshold is a multiple of the 'by' parameter.}
 
 \item{cut_off}{Integer, defines the size that a tree must have to be included
 in the analysis. Only trees with the number of tips > cut_off are considered
-(default: cut_off = 250).}
+(default: cut_off = 100).}
 
 \item{kmax}{Integer, sets the maximum number of clusters explored by the
 clustering algorithm when the 'method' parameter is set to "kmeans" or
@@ -134,7 +134,7 @@ threshold(s) level applied and "disease" is the name of the disease of interest
 taken directly from the name of the sample_file (i.e.,it is equal to the
 'disout' parameter of the 'sample4nodesigl()' function).
 
-The column headings and related information displayed are as follows:\cr
+The column headings and related information displayed are as follows:
 
 \emph{- species}, names of the species included in the analysed "hot
 tree";\cr
@@ -161,23 +161,24 @@ threshold. Possible values are: 1, 2 or NA for hidden states. When multiple
 reference thresholds are used, the different assumed states are shown
 separated by "|" symbol following the ascending order of the reference thresholds;\cr
 \emph{-prior_state1_probs},for each tip in the "hot tree", the column shows the
-\emph{a priori} probability of 'state 1' assumed by the analysis, based on
-the specified reference threshold(s). These values express the assumed prior
-probability of measuring the 'state 1' conditional upon its "true" state is
-indeed 'state 1'and conditional upon its state is "non-hidden" (see the
-'castor' package manual). When a single reference threshold is used (i.e.,
-when 'method' is set to "single_thr", "kmeans" or "pam") probabilities are
-shown in the form of a vector of length 2. Error-free measurement (i.e.,
-c(1,0)) is assumed for the known medicinal species and for the outgroup
-taxon (see Details). For convenience, the same is printed for taxa with
-prior hidden state (i.e., "NA") even if the information is not used in
-computation by the function. When multiple reference thresholds are used
-(i.e., when 'method' is set to "multi_thr") a modified format is used where
-the different assumed probabilities for 'state 1' are shown separated by "|"
-symbol following the ascending order of the reference thresholds. Since the
-assumed value for 'state 2' never changes, only one value is shown. For
-example, the modified format c(0.88792|0.88792|1,0) shows the assumed
-probabilities for a tip, based on three different reference thresholds).\cr
+\emph{a priori} probability of 'state 1' assumed by the
+analysis, based on  the specified reference threshold(s).
+These values express the assumed prior probability of measuring the
+'state 1' conditional upon its "true" state is indeed 'state 1'and
+conditional upon its state is "non-hidden" (see the 'castor' package manual).
+When a single reference threshold is used (i.e., when 'method' is set to
+"single_thr", "kmeans" or "pam") probabilities are shown in the form of a
+vector of length 2. Error-free measurement (i.e., c(1,0)) is assumed for
+the known medicinal species and for the outgroup taxon (see Details).
+For convenience, the same is printed for taxa with prior hidden state
+(i.e., "NA") even if the information is not used in computation by the function.
+When multiple reference thresholds are used (i.e., when 'method' is set
+to "multi_thr") a modified format is used where the different assumed
+probabilities for 'state 1' are shown separated by "|" symbol following
+the ascending order of the reference thresholds. Since the assumed value for
+'state 2' never changes, only one value is shown.
+For example, the modified format c(0.88792|0.88792|1,0) shows the assumed
+probabilities for a tip, based on three different reference thresholds).
 
 A second pdf file is created when the 'kmeans' or 'pam' methods are
 selected, showing the optimal number of clusters obtained through the
@@ -230,7 +231,7 @@ simultaneously (see 'method' parameter).
 \item  The "minimum distance" sample is automatically partitioned by a clustering
 algorithm into an optimal number of clusters. The cluster including the greatest
 distances is taken as a reference and the species corresponding to these distances
-are considered as species with putative low medicinal potential and assigned to 'state 2'.}\cr
+are considered as species with putative low medicinal potential and assigned to 'state 2'.}
 
 The 'state1_probs' parameter available in the 'hsp_binomial()' function is
 then used to account for potential state-measurement errors. For each
@@ -259,7 +260,7 @@ species not assigned to 'state 1' or 'state 2' are treated by the function
 as hidden states.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # WARNING: to run the example a copy of the Phylocom (Webb et al. 2008) binaries MUST be in the
 # current temp directory. # DO NOT RUN otherwise!
 # Use tempdir() to find the current temp directory.
@@ -404,26 +405,27 @@ disease\t1\tGenusQ_t419")
 \itemize{
 \item Maechler M., Rousseeuw P., Struyf A., Hubert M., Hornik K. (2023).
 cluster: Cluster Analysis Basics and Extensions.
-https://CRAN.R-project.org/package=cluster.
+https://CRAN.R-project.org/package=cluster.\cr
 \item Louca S, Doebeli M (2017). “Efficient comparative phylogenetics on large trees.”
-Bioinformatics. doi:10.1093/bioinformatics/btx701.
+Bioinformatics. doi:10.1093/bioinformatics/btx701.\cr
 \item Paradis E, Schliep K (2019). “ape 5.0: an environment for modern phylogenetics
 and evolutionary analyses in R.” Bioinformatics, 35, 526-528.
-doi:10.1093/bioinformatics/bty633.
+doi:10.1093/bioinformatics/bty633.\cr
 \item Kassambara A, Mundt F. (2022)   factoextra: Extract and Visualize the Results
 of Multivariate Data Analyses. https://CRAN.R-project.org/package=factoextra
 \item Revell L.J.(2024). phytools 2.0: an updated R ecosystem for phylogenetic
 comparative methods (and other things). PeerJ 12:e16505
-https://doi.org/10.7717/peerj.16505
+https://doi.org/10.7717/peerj.16505\cr
 \item Webb, C. O.; Ackerly, D. D. & Kembel, S. W. (2008) Phylocom: software for the
 analysis of phylogenetic community structure and trait evolution.
-Bioinformatics 24: 2098-2100.
+Bioinformatics 24: 2098-2100.\cr
 \item Zaneveld K.R., and Thurber  R. L. V. (2014). Hidden state prediction: A
 modification of classic ancestral state reconstruction algorithms helps unravel
-complex symbioses. Frontiers in Microbiology. 5:431.
-\item Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-identification and the prioritisation of new plants with medicinal
-potential: the  pm4mp R package.\cr
+complex symbioses. Frontiers in Microbiology. 5:431.\cr
+\item Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+prioritisation of plant species with underexplored medicinal potential:
+The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189\cr
 }
 }
 \seealso{

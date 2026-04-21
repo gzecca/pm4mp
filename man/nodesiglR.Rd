@@ -42,7 +42,7 @@ Parameters) and a copy of the Phylocom binaries are in the current working
 directory. Please refer to the Phylocom manual for OS details.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # WARNING: to run the example a copy of the Phylocom binaries MUST be in the
 # current temp directory. DO NOT RUN otherwise!
 # Use tempdir() to find the current temp directory.
@@ -81,9 +81,10 @@ directory. Please refer to the Phylocom manual for OS details.
 \item Webb, C. O.; Ackerly, D. D. & Kembel, S. W. (2008) Phylocom: software for
 the analysis of phylogenetic community structure and trait evolution.
 Bioinformatics 24: 2098-2100.
-\item Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-identification and the prioritisation of new plants with medicinal
-potential: the  pm4mp R package.\cr
+\item Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+prioritisation of plant species with underexplored medicinal potential:
+The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189
 }
 }
 \seealso{

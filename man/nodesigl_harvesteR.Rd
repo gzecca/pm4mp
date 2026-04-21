@@ -92,7 +92,7 @@ plants and stable hot nodes are clumped, thus representing the most
 promising clades for the search for new medicinal species.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # WARNING: to run the example a copy of the Phylocom binaries MUST be in the
 # current temp directory. DO NOT RUN otherwise!
 # Use tempdir() to find the current temp directory.
@@ -157,16 +157,17 @@ disease\t1\tA_t43")
 \references{
 \itemize{
 \item Louca S, Doebeli M (2017). “Efficient comparative phylogenetics on large
-trees.” Bioinformatics. doi:10.1093/bioinformatics/btx701.
+trees.” Bioinformatics. doi:10.1093/bioinformatics/btx701.\cr
 \item Paradis E, Schliep K (2019). “ape 5.0: an environment for modern phylogenetics
 and evolutionary analyses in R.” Bioinformatics, 35, 526-528.
-doi:10.1093/bioinformatics/bty633.
+doi:10.1093/bioinformatics/bty633.\cr
 \item Webb, C. O.; Ackerly, D. D. & Kembel, S. W. (2008) Phylocom: software for the
 analysis of phylogenetic community structure and trait evolution.
-Bioinformatics 24: 2098-2100.
-\item Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-identification and the prioritisation of new plants with medicinal
-potential: the  pm4mp R package.\cr
+Bioinformatics 24: 2098-2100.\cr
+\item Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+prioritisation of plant species with underexplored medicinal potential:
+The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189\cr
 }
 }
 \seealso{

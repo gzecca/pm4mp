@@ -29,8 +29,9 @@ PHYLIP format from which the reference phylogeny was constructed
 and the phylogeny of reference. The alignment and the tree used must be
 in in sequential PHYLIP and a Newick format, respectively.
 This option was expressly designed to work with the data of Zanne et al. (2014),
-in which case the 'reference' parameter must be:
-c(alignment="Vascular_Plants_32223_taxon.phy", tree="Vascular_Plants_rooted.dated.tre").
+in which case the 'reference' parameter must be:\cr
+c(alignment ="Vascular_Plants_32223_taxon.phy",\cr
+tree ="Vascular_Plants_rooted.dated.tre").
 In this case the alignment is used exclusively to reconstruct the complete
 names of the hybrid species while the tree is used for matching
 taxa after hybrids names correction.
@@ -42,8 +43,8 @@ It can be one of:
 \item "align": for an alignment in sequential PHYLIP format;
 \item "tr": for a tree in Newick format;
 \item "vect": for vector specified by the user;
-\item "z": for a vector with the following form:
-c(alignment="path_alignment_file_name", tree="path_tree_file_name"),
+\item "z": for a vector with the following form:\cr
+c(alignment ="path_alignment_file_name", tree ="path_tree_file_name"),
 where alignment and tree are in sequential PHYLIP and Newick format, respectively.
 }
 No other forms are allowed. Please note that the  "z" option will
@@ -81,7 +82,7 @@ details). Default value = 0.9.}
 The number and percentage of medicinal plants that produced an exact
 match with the reference taxa are printed on the screen. Duplicate names,
 if any, are also printed on the screen when check_dup=TRUE. Two csv files
-named "diseasename_cleanedup_exmatch.csv" and
+named "diseasename_cleanedup_exmatch.csv" and\cr
 "diseasename_cleanedup_qumatch_threshold.csv" are saved. The first one is
 single column file including all medicinal species that produced an exact
 match with the reference taxa. The latter is a three-columns file
@@ -109,7 +110,7 @@ proceeding further with subsequent analyses.
 }
 \details{
 A preliminary cleaning is applied to species names downloaded from
-the plants-diseases databases following Zecca et all. 2025. Several
+the plants-diseases databases following Zecca et all. (2026). Several
 cleaning steps are performed. In particular:
 \itemize{
 \item  leading and/or trailing whitespace are removed from species names;
@@ -135,7 +136,7 @@ may not include full species names. For this reason the list of reference
 species can be provided in different ways by the user (see parameters).
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # NOT RUN
 # The following example show you the setting used by Zecca et al. (2025)
 # to prepare the input files for subsequent analysis.
@@ -244,10 +245,11 @@ doi:10.1093/bioinformatics/bty633. \cr
 The R Journal (2014) 6:1, pages 111-122.\cr
 \item Zanne, A., Tank, D., Cornwell, W. et al. Three keys to the radiation of
 angiosperms into freezing environments.  Nature 506, 89–92 (2014).
-https://doi.org/10.1038/nature12872
-\item Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-identification and the prioritisation of new plants with medicinal
-potential: the  pm4mp R package.\cr
+https://doi.org/10.1038/nature12872\cr
+\item Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+prioritisation of plant species with underexplored medicinal potential:
+The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189.\cr
 }
 }
 \seealso{
@@ -255,7 +257,7 @@ potential: the  pm4mp R package.\cr
 }
 \author{
 Giovanni Zecca, \email{giovanni.zecca@unimib.it}, with the
-contribution of Francesco Artusa,
+contribution of Francesco Artusa,\cr
 \email{francesco.artusa@studenti.unimi.it} and Elisa Toini,
 \email{e.toini@campus.unimib.it}
 }

@@ -41,7 +41,7 @@ Different colours are used to show results from different files. Different
 visualization options are available (see the parameter 'format' below).
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # WARNING: to run the example a copy of the Phylocom binaries MUST be in the
 # current temp directory. DO NOT RUN otherwise!
 # Use tempdir() to find the current temp directory.
@@ -206,10 +206,11 @@ disease\t1\tGenusQ_t419")
 \references{
 \itemize{
 \item Wickham H. ggplot2: Elegant Graphics for Data Analysis.
-Springer-Verlag New York, 2016.
-\item Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-identification and the prioritisation of new plants with medicinal
-potential: the  pm4mp R package.\cr
+Springer-Verlag New York, 2016.\cr
+\item Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+prioritisation of plant species with underexplored medicinal potential:
+The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189\cr
 }
 }
 \author{

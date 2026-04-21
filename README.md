@@ -120,7 +120,7 @@ help("has")
   each example, the code needed to clean up the user’s temp folder is
   provided.
 
-### Credits and references
+### Reference and credits
 
 **If you use the `pm4mp`package, please cite:**
 

@@ -34,10 +34,11 @@
 #'
 #'@references
 #' - Wickham H. ggplot2: Elegant Graphics for Data Analysis.
-#'   Springer-Verlag New York, 2016.
-#' - Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-#'   identification and the prioritisation of new plants with medicinal
-#'   potential: the  pm4mp R package.\cr
+#'   Springer-Verlag New York, 2016.\cr
+#' - Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+#'   prioritisation of plant species with underexplored medicinal potential:
+#'   The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+#'   Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189\cr
 #'
 #'@examplesIf interactive()
 #' # WARNING: to run the example a copy of the Phylocom binaries MUST be in the

@@ -28,7 +28,7 @@ each disease is also provided. These numbers are useful to set the "dn"
 parameter in the 'pr2d_CMAUPv2' function.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 #Use tempdir() to find the current temp directory.
 library(rvest)
 library(polite)
@@ -50,10 +50,11 @@ DOI: doi.org/10.1093/nar/gky965.\cr
 \item Perepolkin D. (2023) polite: Be Nice on the Web.
 https://github.com/dmi3kno/polite \cr
 \item Wickham H (2023). rvest: Easily Harvest (Scrape) Web Pages.
-https://rvest.tidyverse.org/, https://github.com/tidyverse/rvest.
-\item Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-identification and the prioritisation of new plants with medicinal
-potential: the  pm4mp R package.\cr
+https://rvest.tidyverse.org/, https://github.com/tidyverse/rvest.\cr
+\item Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+prioritisation of plant species with underexplored medicinal potential:
+The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189\cr
 }
 }
 \seealso{

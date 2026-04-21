@@ -1,5 +1,5 @@
 #'
-#'@title Preparing the input 'sample file' for Phylocom
+#'@title Preparing the input 'sample file' for 'nodesigl' analysis (Phylocom)
 #'
 #'@description This function prepares the "sample" file to be used with the
 #'  software Phylocom (Webb et al. 2008), starting from a tree file and a
@@ -46,10 +46,11 @@
 #'   doi:10.1093/bioinformatics/bty633.\cr
 #' - Webb, C. O.; Ackerly, D. D. & Kembel, S. W. (2008) Phylocom: software for the
 #'   analysis of phylogenetic community structure and trait evolution.
-#'   Bioinformatics 24: 2098-2100.
-#'- Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-#'   identification and the prioritisation of new plants with medicinal
-#'   potential: the  pm4mp R package.\cr
+#'   Bioinformatics 24: 2098-2100.\cr
+#'-  Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+#'   prioritisation of plant species with underexplored medicinal potential:
+#'   The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+#'   Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189\cr
 #'
 #'@seealso [clean_and_match()],[tree4nodesigl()]
 #'

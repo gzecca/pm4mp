@@ -23,12 +23,12 @@ in the analysis. Only trees with the number of tips > cut_off are considered
 (default: cut_off = NULL).}
 }
 \value{
-A csv file with four columns is saved in the current working
-"has_t\emph{i}\emph{input_file_name.csv", where "t\emph{i}" is the
+A csv file with four columns is saved in the current working directory:
+"has_ti_input_file_name.csv", where \emph{i} is the
 "hot tree" analysed (with \emph{i} corresponding to the \emph{i}-th tree in
 the "IndepTrees" file), and "input_file_name" is the base name of the
-IndepHotNodes" input file, after that the prefix
-"IndependentHotNodesByTrees}" has been removed (i.e., it is the "*"
+"IndepHotNodes" input file, after that the prefix
+"IndependentHotNodesByTrees_" has been removed (i.e., it is the "*"
 part of the file name). Assuming that the ‘disout’ parameter of the function
 ‘sample4nodesigl()’ has been set to take this information into account,
 the name of the reference phylogeny and the value of the "fract" parameter
@@ -56,18 +56,18 @@ The HAS approach is based on the "hot node" concept (Saslis-Lagoudakis et. al., 
 and on the assumption that the regions of a hot tree where hot nodes are
 phylogenetically nested can be viewed as the clades in which the likelihood of finding
 new medicinal plants is highest.
-Cosequently,the greater the number of hierarchically nested hot nodes a species
+Cosequently, the greater the number of hierarchically nested hot nodes a species
 descends from, the higher its probability of being a medicinal taxon. The function
 calculates the number of ancestral hot nodes for each terminal taxon in the "hot trees"
 selected based on the parameter 'cut_off'. For each taxon found in a “hot tree”,
 the ratio between its HAS and the maximum HAS calculated in that tree is also
 calculated. Since this function does not need to keep track of branch descending
 from "hot nodes",it uses a different calculation method than the one implemented
-in the "hot_tree_painteR" function. The values ​​obtained from the two functions are
+in the "hot_tree_painteR" function. The values obtained from the two functions are
 however identical.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # WARNING: to run the example a copy of the Phylocom (Webb et al. 2008) binaries MUST be in the
 # current temp directory. # DO NOT RUN otherwise!
 # Use tempdir() to find the current temp directory.
@@ -191,20 +191,21 @@ file.remove(paste0(path,toremove))
 \itemize{
 \item Paradis E, Schliep K (2019). “ape 5.0: an environment for modern phylogenetics
 and evolutionary analyses in R.” Bioinformatics, 35, 526-528.
-doi:10.1093/bioinformatics/bty633.
+doi:10.1093/bioinformatics/bty633.\cr
 \item Revell L.J.(2024). phytools 2.0: an updated R ecosystem for phylogenetic
 comparative methods (and other things). PeerJ 12:e16505
-https://doi.org/10.7717/peerj.16505
+https://doi.org/10.7717/peerj.16505\cr
 \item Saslis-Lagoudakis CH, Savolainen V, Williamson EM, Forest F, Wagstaff SJ,
 Baral SR, Watson MF, Pendry CA, Hawkins JA. Phylogenies reveal predictive power
 of traditional medicine in bioprospecting. Proc Natl Acad Sci U S A. 2012
-Sep 25;109(39):15835-40. doi: 10.1073/pnas.1202242109.
+Sep 25;109(39):15835-40. doi: 10.1073/pnas.1202242109.\cr
 \item Webb, C. O.; Ackerly, D. D. & Kembel, S. W. (2008) Phylocom: software for the
 analysis of phylogenetic community structure and trait evolution.
-Bioinformatics 24: 2098-2100.
-\item Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-identification and the prioritisation of new plants with medicinal
-potential: the  pm4mp R package.\cr
+Bioinformatics 24: 2098-2100.\cr
+\item Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+prioritisation of plant species with underexplored medicinal potential:
+The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189\cr
 }
 }
 \seealso{

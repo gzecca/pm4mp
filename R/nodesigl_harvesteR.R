@@ -152,16 +152,17 @@ bestRank<-function(plus, DF){
 #'
 #'@references
 #' - Louca S, Doebeli M (2017). “Efficient comparative phylogenetics on large
-#'   trees.” Bioinformatics. doi:10.1093/bioinformatics/btx701.
+#'   trees.” Bioinformatics. doi:10.1093/bioinformatics/btx701.\cr
 #' - Paradis E, Schliep K (2019). “ape 5.0: an environment for modern phylogenetics
 #'   and evolutionary analyses in R.” Bioinformatics, 35, 526-528.
-#'   doi:10.1093/bioinformatics/bty633.
+#'   doi:10.1093/bioinformatics/bty633.\cr
 #' - Webb, C. O.; Ackerly, D. D. & Kembel, S. W. (2008) Phylocom: software for the
 #'   analysis of phylogenetic community structure and trait evolution.
-#'   Bioinformatics 24: 2098-2100.
-#'- Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-#'   identification and the prioritisation of new plants with medicinal
-#'   potential: the  pm4mp R package.\cr
+#'   Bioinformatics 24: 2098-2100.\cr
+#' - Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+#'   prioritisation of plant species with underexplored medicinal potential:
+#'   The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+#'   Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189\cr
 #'
 #'@seealso [clean_and_match()], [sample4nodesigl()], [tree4nodesigl()]
 #'

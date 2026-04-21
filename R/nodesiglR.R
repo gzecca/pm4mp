@@ -38,9 +38,10 @@
 #' - Webb, C. O.; Ackerly, D. D. & Kembel, S. W. (2008) Phylocom: software for
 #'   the analysis of phylogenetic community structure and trait evolution.
 #'   Bioinformatics 24: 2098-2100.
-#' - Zecca, G., Toini, E., Labra, M, Grassi, F. (2025) Accelerating the
-#'   identification and the prioritisation of new plants with medicinal
-#'   potential: the  pm4mp R package.\cr
+#' - Zecca, G., Toini, E., Labra, M., & Grassi, F. (2026). Accelerating the
+#'   prioritisation of plant species with underexplored medicinal potential:
+#'   The pm4mp (Phylogenetic Methods for Medicinal Plants) R package.
+#'   Plants, People, Planet, 1–19. https://doi.org/10.1002/ppp3.70189
 #'
 #'@seealso [tree4nodesigl()], [sample4nodesigl()]
 #'
